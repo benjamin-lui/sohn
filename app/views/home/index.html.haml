@@ -1,0 +1,65 @@
+.row
+	.span9
+
+		%div.carousel.slide#homeCarousel
+			-#
+				%ol.carousel-indicators
+					%li(data-target="#homeCarousel" data-slide-to="0")
+					%li(data-target="#homeCarousel" data-slide-to="1")
+					%li(data-target="#homeCarousel" data-slide-to="2")
+			%div.carousel-inner
+				%div.item.active
+					%img{:src => "/assets/stem-cell.jpg"}
+					%div.carousel-caption
+						%h4
+							First Thumbnail label
+						%p
+							blah blah caption
+				%div.item
+					%img{:src => "/assets/device.jpg"}
+					%div.carousel-caption
+						%h4
+							Second Thumbnail label
+						%p
+							blah blah caption
+				%div.item
+					%img{:src => "/assets/bootstrap-mdo-sfmoma-03.jpg"}
+					%div.carousel-caption
+						%h4
+							Third Thumbnail label
+						%p
+							blah blah caption
+				
+			%a.carousel-control.left{:href => "#homeCarousel", 'data-slide' => "prev"}
+				&lsaquo;
+			%a.carousel-control.right{:href => "#homeCarousel", 'data-slide' => "next"}
+				&rsaquo;
+	.span3
+		.well.well-small
+			gen. info blurb
+		
+
+.row
+	.bs-docs-example#news
+		%h4
+			Upcoming Events in Spring 2013
+		%ul.media-list
+			%li.media
+				.media-body
+					%h5.media-heading
+						February 28
+					Prof. Sohn will be giving an invited talk in the Dept. of Mechanical Engineering, UC Davis on Feb. 28.
+			%li.media
+				.media-body
+					%h5.media-heading
+						March 2
+					The Sohn Lab will be hosting a workshop for middle-school aged girls (grades 6-8) on Microfludics. This workshop is part of the “Expanding your Horizons” Conference on March 2. See http://www.expandingyourhorizons.org
+			%li.media
+				.media-body
+					%h5.media-heading
+						March 21
+					Prof. Sohn will be giving an invited talk at the American Physical Society Annual March Meeting in Baltimore, March 21. She will be speaking about “Uncovering stem-cell heterogeneity in the microniche with label-free microfluidics.”
+			%li
+				Anand, Bo, and Eric will be presenting their work on “Micropost microenvironments for studying luminal-basal lineage commitment of breast cancer cells.” This is a project that we are collaborating with Dr. Mark Labarge at LBNL.
+			%li
+				Prof. Sohn will be giving an invited talk at the 57th International Conference on Electron, Ion, and PHoton Beam Technology and Nanofabrication in Nashville, Tennessee. The title of her talk is “Electronic Sensing of Stem Cells.”

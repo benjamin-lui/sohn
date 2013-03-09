@@ -1,0 +1,61 @@
+.row
+	.span3
+		%h3
+			Lab
+		%address
+			5127/5129 Etcheverry Hall and 137 Sutardja Dai Hall
+		%h3
+			Prof. Sohn's Office
+		%address
+			5118 Etcheverry Hall
+			%br/ 
+			University of California, Berkeley
+			%br/ 
+			Berkeley, CA 94720
+		
+		%i.icon-envelope
+			%a(href="mailto:sohn@me.berkeley.edu") sohn@me.berkeley.edu
+	.span9
+		%h3
+			Contact Form
+		%form
+			%fieldset
+				%label
+					Name
+				%input.input-xlarge(type="text" placeholder="Name")
+				%br/
+				%label
+					Email
+				%input.input-xlarge(type="text" placeholder="Email")
+				%br/
+				%label
+					Subject
+				%input.input-xlarge(type="text" placeholder="Subject")
+				%br/
+				%label
+					Message
+				%textarea.span6(rows="10")
+			%button.btn.btn-primary(type="submit")
+				Send!
+	-#
+		%form.form-horizontal
+			%div.control-group
+				%label.control-label(for="name")
+					Name
+				%div.controls
+					%input.input-large(type="text" id="name" placeholder="Name")
+			%div.control-group
+				%label.control-label(for="email")
+					Email
+				%div.controls
+					%input.input-large(type="text" id="email" placeholder="Email")
+			%div.control-group
+				%label.control-label(for="subject")
+					Subject
+				%div.controls
+					%input.input-large(type="text" id="subject" placeholder="Subject")
+			%div.control-group
+				%label.control-label(for="message")
+					Message
+				%div.controls
+					%textarea(rows="4" id="message")

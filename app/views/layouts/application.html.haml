@@ -1,0 +1,69 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= content_for?(:title) ? yield(:title) : "Sohn"
+    = csrf_meta_tags
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
+    = stylesheet_link_tag "application", :media => "all"
+    %link(href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144")
+    %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
+    %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
+    %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
+    %link(href="favicon.ico" rel="shortcut icon")
+
+
+  %body
+    .navbar.navbar-fixed-top.navbar-inverse
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand(href="/") The Sohn Laboratory
+          .container.nav-collapse
+            %ul.nav
+              %li.divider-vertical
+              = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'research')) do
+                = link_to "Research", :controller => 'home', :action => 'research'
+              = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'people')) do
+                = link_to "People", :controller => 'home', :action => 'people'
+              = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'publications')) do
+                = link_to "Publications", :controller => 'home', :action => 'publications'
+              = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'lab')) do
+                = link_to "Lab", :controller => 'home', :action => 'lab'
+              = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'positions')) do
+                = link_to "Positions", :controller => 'home', :action => 'positions'
+              = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'sponsors')) do
+                = link_to "Sponsors", :controller => 'home', :action => 'sponsors'
+              = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'links')) do
+                = link_to "Links", :controller => 'home', :action => 'links'
+            %ul.nav.pull-right
+              = content_tag :li, :class => ('active' if current_page?(:controller => "contact")) do
+                = link_to "Contact us", :controller => 'contact'
+
+    .container
+
+      = bootstrap_flash
+      = yield
+    
+      %footer
+        .navbar.navbar-fixed-bottom
+          .navbar-inner#bottomNav
+            .container
+              %ul.nav
+                %li= link_to "UC Berkeley", "http://www.berkeley.edu/"
+                %li.divider-vertical
+                %li= link_to "Bioengineering Department", "http://bioeng.berkeley.edu/"
+                %li.divider-vertical
+                %li= link_to "Mechanical Engineering Department", "http://me.berkeley.edu/"
+    /
+      Javascripts
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    = javascript_include_tag "application"
