@@ -16,6 +16,9 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="favicon.ico" rel="shortcut icon")
 
+    %link(href="http://blueimp.github.com/cdn/css/bootstrap.min.css" rel="stylesheet")
+    %link(href="assets/bootstrap-image-gallery.min.css" rel="stylesheet")
+
 
   %body
     .navbar.navbar-fixed-top.navbar-inverse
@@ -25,7 +28,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="/") The Sohn Laboratory
+          %a.brand(href="/") The Sohn Lab
           .container.nav-collapse
             %ul.nav
               %li.divider-vertical
@@ -43,6 +46,8 @@
                 = link_to "Sponsors", :controller => 'home', :action => 'sponsors'
               = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'links')) do
                 = link_to "Links", :controller => 'home', :action => 'links'
+              = content_tag :li, :class => ('active' if current_page?(:controller => "home", :action => 'gallery')) do
+                = link_to "Gallery", :controller => 'home', :action => 'gallery'
             %ul.nav.pull-right
               = content_tag :li, :class => ('active' if current_page?(:controller => "contact")) do
                 = link_to "Contact us", :controller => 'contact'

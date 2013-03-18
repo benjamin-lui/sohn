@@ -9,6 +9,7 @@ Sohn::Application.routes.draw do
   get "home/positions"
   get "home/sponsors"
   get "home/links"
+  get "home/gallery"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
