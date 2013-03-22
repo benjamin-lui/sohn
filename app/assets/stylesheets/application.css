@@ -9,6 +9,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap_and_overrides
+ *= require bootstrap-image-gallery
+ *= require bootstrap-image-gallery.min
+ *= require style
  *= require_self
  *= require_tree .
  */
@@ -53,6 +56,16 @@ body {
 	float: right;
 }
 
-#bottomNav {
-	background-color: #3E3535;
+.active > a {
+    color: #ffffff!important;
+    background-color: #3B5998!important;
+}
+#topNav {
+    background-color: #3B5998!important;
+    background-image: none!important;
+}
+
+
+#gen-info {
+    text-align: left;
 }

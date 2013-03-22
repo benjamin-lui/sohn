@@ -1,12 +1,11 @@
-%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
+%link(href="http://blueimp.github.com/cdn/css/bootstrap.min.css" rel="stylesheet")
+
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
 %script{:src => "http://blueimp.github.com/cdn/js/bootstrap.min.js"}
 %script{:src => "http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"}
-%script{:src => "assets/bootstrap-image-gallery.min.js"}
-
-
 
 #gallery{"data-toggle" => "modal-gallery", "data-target" => "#modal-gallery"}
-	%a{:href => "/assets/gallery/DSC_0591.jpg", "title" => "hello", "data-gallery" => "gallery"}
+	%a{:href => "/assets/gallery/DSC_0591.jpg", "data-gallery" => "gallery"}
 		%img{:src => "/assets/gallery/DSC_0591_thumb.jpg"}
 	%a{:href => "/assets/gallery/DSC_0585.jpg", "data-gallery" => "gallery"}
 		%img{:src => "/assets/gallery/DSC_0585_thumb.jpg"}
@@ -21,15 +20,17 @@
 	.modal-body
 		.modal-image
 	.modal-footer
-		%a.btn.btn-primary.modal-next
-			Next
-			%i.icon-arrow-right.icon-white
-		%a.btn.btn-primary.modal-prev
-			Previous
-			%i.icon-arrow-left.icon-white
 		%a.btn.btn-success.modal-play.modal-slideshow{"data-slideshow" => "5000"}
 			%i.icon-play.icon-white
-			Slideshow
-		%a.btn.modal-download{:target=>"_blank"}
-			%i.icon-download
-			Download
+			%span
+				Slideshow
+		%a.btn.btn-primary.modal-prev
+			%i.icon-arrow-left.icon-white
+			%span
+				Previous
+		%a.btn.btn-primary.modal-next
+			%span
+				Next
+			%i.icon-arrow-right.icon-white
+		
+		
